@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FutureAI Global</title>
+<style>
+body {font-family: Arial; margin:0; background:#0a0a0a; color:#fff;}
+header {padding:20px; background:#111; text-align:center;}
+section {padding:40px;}
+h1 {color:#00eaff;}
+button {padding:10px 20px; background:#00eaff; border:none; cursor:pointer;}
+.lang-btn {position:fixed; top:10px; right:10px;}
+footer {padding:20px; background:#111; text-align:center;}
+</style>
+</head>
+<body>
+
+<div class="lang-btn">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('th')">TH</button>
+</div>
+
+<header>
+<h1 id="title">FutureAI Global</h1>
+<p id="subtitle">Discover the Future of Artificial Intelligence</p>
+<button id="cta">Explore AI Tools</button>
+</header>
+
+<section>
+<h2 id="tools">Trending AI Tools</h2>
+<ul>
+<li>ChatGPT</li>
+<li>Midjourney</li>
+<li>Claude AI</li>
+<li>Notion AI</li>
+</ul>
+</section>
+
+<section>
+<h2 id="about">About Us</h2>
+<p id="aboutText">
+FutureAI Global is a platform to explore AI tools, trends, and future technology.
+</p>
+</section>
+
+<footer>
+<p>© 2026 FutureAI Global | AI Tech Platform</p>
+</footer>
+
+<script>
+const content = {
+en: {
+title: "FutureAI Global",
+subtitle: "Discover the Future of Artificial Intelligence",
+cta: "Explore AI Tools",
+tools: "Trending AI Tools",
+about: "About Us",
+aboutText: "FutureAI Global is a platform to explore AI tools, trends, and future technology."
+},
+th: {
+title: "FutureAI Global",
+subtitle: "ค้นพบอนาคตของปัญญาประดิษฐ์",
+cta: "สำรวจเครื่องมือ AI",
+tools: "เครื่องมือ AI ยอดนิยม",
+about: "เกี่ยวกับเรา",
+aboutText: "FutureAI Global คือแพลตฟอร์มสำหรับค้นหาเครื่องมือ AI และเทคโนโลยีอนาคต"
+}
+};
+
+function setLang(lang){
+document.getElementById("title").innerText = content[lang].title;
+document.getElementById("subtitle").innerText = content[lang].subtitle;
+document.getElementById("cta").innerText = content[lang].cta;
+document.getElementById("tools").innerText = content[lang].tools;
+document.getElementById("about").innerText = content[lang].about;
+document.getElementById("aboutText").innerText = content[lang].aboutText;
+}
+</script>
+
+</body>
+</html>
